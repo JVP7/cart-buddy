@@ -45,4 +45,4 @@ If this policy changes, the update will be reflected here with a new "Last updat
 
 ## Contact
 
-Questions about this policy can be raised via the [GitHub repository](https://github.com/yourusername/cart-buddy/issues).
+Questions about this policy can be raised via the [GitHub repository](https://github.com/JVP7/cart-buddy/issues).
