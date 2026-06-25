@@ -1,3 +1,7 @@
+
+<img width="1400" height="560" alt="cart-buddy-marquee-1400x560" src="https://github.com/user-attachments/assets/a28093cc-36ba-44a8-884b-53dfedc0795e" />
+
+
 # Cart Buddy 🐻
 
 A friendly browser extension that keeps track of everything you've spotted across Amazon, eBay, and Target, so you don't lose track of items saved on different shopping platforms.
