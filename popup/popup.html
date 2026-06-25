@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Cart Buddy</title>
+  <link rel="stylesheet" href="popup.css" />
+</head>
+<body>
+  <header class="cb-header">
+    <div class="cb-header-avatar">🐻</div>
+    <div>
+      <h1>Cart Buddy</h1>
+      <p id="cb-subtitle">Everything you've spotted, in one place.</p>
+    </div>
+  </header>
+
+  <main id="cb-list" class="cb-list">
+    <!-- populated by popup.js -->
+  </main>
+
+  <div id="cb-empty" class="cb-empty" hidden>
+    <div class="cb-empty-avatar">🐻</div>
+    <p>Nothing saved yet. Browse Amazon, eBay, or Target and I'll show up to help you save things.</p>
+  </div>
+
+  <script src="../storage.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>

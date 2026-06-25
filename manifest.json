@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Cart Buddy",
+  "version": "0.1.0",
+  "description": "A friendly bear that keeps track of everything you've spotted across Amazon, eBay, and Target.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "permissions": ["storage", "activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.amazon.com/*",
+        "https://www.ebay.com/*",
+        "https://www.target.com/*"
+      ],
+      "js": ["storage.js", "content-scripts/site-adapters.js", "content-scripts/widget.js"],
+      "css": ["content-scripts/widget.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}
