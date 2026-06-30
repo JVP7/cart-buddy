@@ -51,7 +51,7 @@ async function renderPopup() {
 
       return `
         <div class="cb-store-group">
-          <span class="cb-store-label ${store}">${STORE_LABELS[store] || store}</span>
+          <span class="cb-store-label ${sanitizeStoreClass(store)}">${escapeHtml(displayStoreName(store, storeItems))}</span>
           ${cards}
         </div>
       `;
@@ -91,6 +91,21 @@ function escapeHtml(str) {
 
 function escapeAttr(str) {
   return (str || "").replace(/"/g, "&quot;");
+}
+
+// Prefer the capitalized name saved with the item (e.g. "Gymshark"); fall
+// back to the known label map for the three dedicated stores, then finally
+// to the raw slug if neither is available (shouldn't normally happen).
+function displayStoreName(store, storeItems) {
+  const savedName = storeItems.find((item) => item.storeName)?.storeName;
+  return savedName || STORE_LABELS[store] || store;
+}
+
+// Store slugs come from hostnames and could theoretically contain characters
+// that aren't safe as a bare CSS class (e.g. numbers leading the string).
+// Strip anything that isn't a letter, number, or hyphen to be safe.
+function sanitizeStoreClass(store) {
+  return (store || "store").replace(/[^a-zA-Z0-9-]/g, "");
 }
 
 renderPopup();

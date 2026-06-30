@@ -77,6 +77,10 @@ body {
   border-radius: 8px;
   margin-bottom: 8px;
   color: #fff;
+  /* Default fallback for any store without a dedicated brand color below.
+     Uses Cart Buddy's own amber rather than guessing at an unknown
+     store's actual brand color, so labels are always legible. */
+  background: var(--cb-amber);
 }
 
 .cb-store-label.amazon { background: var(--cb-amazon); }
