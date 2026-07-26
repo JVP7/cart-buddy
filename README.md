@@ -31,7 +31,7 @@ Beyond the four dedicated stores, Cart Buddy checks each page for:
 
 ## Installing
 
-Cart Buddy is live on the Chrome Web Store. But, if running it locally it is preferred you can: 
+Cart Buddy is live on the Chrome Web Store. But, if running it locally is preferred you can: 
 
 1. Clone or download this repo
 2. Open Chrome and go to `chrome://extensions`
